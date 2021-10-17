@@ -1,0 +1,139 @@
+{
+  "title": "School Registration Form",
+  "fields": [
+    {
+      "name": "name",
+      "label": "Fullname",
+      "placeholder": "",
+      "type": "TextField",
+      "defaultValue": "",
+      "validation": {
+        "type": "string",
+        "rules": [
+          {
+            "type": "required",
+            "params": ["Name is required"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "gender",
+      "label": "Gender",
+      "type": "RadioField",
+      "options": ["Male", "Female"],
+      "defaultValue": "",
+      "validation": {
+        "type": "string",
+        "rules": [
+          {
+            "type": "required",
+            "params": ["Gender is required"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "dateofbirth",
+      "label": "Date of Birth",
+      "placeholder": "",
+      "type": "DatePickerField",
+      "defaultValue": "",
+      "validation": {
+        "type": "string",
+        "rules": [
+          {
+            "type": "required",
+            "params": ["Date of Birth is required"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "phone_number",
+      "label": "Phone No.",
+      "placeholder": "",
+      "type": "TextField",
+      "defaultValue": "",
+      "validation": {
+        "type": "string",
+        "rules": [
+          {
+            "type": "min",
+            "params": [8, "Phone No. can't be less than 8 characters"]
+          },
+          {
+            "type": "required",
+            "params": ["Phone No. is required"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "local_address",
+      "label": "Local Address",
+      "placeholder": "",
+      "type": "TextAreaField",
+      "defaultValue": "",
+      "validation": {
+        "type": "string",
+        "rules": [
+          {
+            "type": "required",
+            "params": ["Local Address is required"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "residential_address",
+      "label": "Residential Address",
+      "placeholder": "",
+      "type": "TextAreaField",
+      "defaultValue": "",
+      "validation": {
+        "type": "string",
+        "rules": [
+          {
+            "type": "required",
+            "params": ["Residential Address is required"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "courses",
+      "label": "I would like to register for the following courses",
+      "placeholder": "",
+      "options": ["Math", "Physics", "Biology", "Chemistry", "Geology"],
+      "type": "SelectField",
+      "defaultValue": "",
+      "validation": {
+        "type": "string",
+        "rules": [
+          {
+            "type": "required",
+            "params": ["Courses is required"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "information_source",
+      "label": "How did you hear about us?",
+      "placeholder": "",
+      "options": ["Newspaper", "Website", "Friend", "Other"],
+      "type": "CheckboxField",
+      "defaultValue": [],
+      "validation": {
+        "type": "array",
+        "rules": [
+          {
+            "type": "min",
+            "params": [1, "Information Source is required"]
+          }
+        ]
+      }
+    }
+  ]
+}
